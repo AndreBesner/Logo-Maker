@@ -11,7 +11,8 @@ const questions = [
     {
         type: 'input',
         name: 'title',
-        message: 'Please enter a company name/acronym, no more than three characters:'
+        message: 'Please enter a company name/acronym, no more than three characters:',
+        validate: (input) => input.length <= 3,
     },
     {
         type: 'input',
@@ -30,3 +31,6 @@ const questions = [
         message: 'Please enter a shape colour:'
     }
 ];
+
+
+// this function actaully writes to 
