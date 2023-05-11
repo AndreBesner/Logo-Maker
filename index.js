@@ -2,7 +2,7 @@
 
 const inquirer = require('inquirer');
 const fs = require('fs');
-const svg = require('svg'); 
+// const svg = require('svg'); 
 //shape classes to be added
 
 
@@ -33,4 +33,15 @@ const questions = [
 ];
 
 
-// this function actaully writes to 
+
+// this function generates the svg file
+// takes answers from inquirer and dumps them into predefined text
+function generateSVG(data){
+
+}
+
+
+// this function actaully writes the generated svg file to directory
+function writeSVG(data){
+    
+}
