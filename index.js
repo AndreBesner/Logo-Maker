@@ -20,7 +20,7 @@ const questions = [
         message: 'Please enter a text colour:'
     },
     {
-        type: 'select',
+        type: 'list',
         name: 'shape',
         message: 'Choose a shape:',
         choices: ['circle', 'square', 'triangle']
@@ -31,6 +31,16 @@ const questions = [
         message: 'Please enter a shape colour:'
     }
 ];
+
+//this function starts the user promps
+function userPrompts() {
+    inquirer.prompt(questions)
+    .then(data => {
+        console.log({data});
+    })
+}
+
+userPrompts();
 
 
 
@@ -43,5 +53,5 @@ function generateSVG(data){
 
 // this function actaully writes the generated svg file to directory
 function writeSVG(data){
-    
+
 }
