@@ -1,0 +1,5 @@
+help 
+
+https://github.com/L10N37/OOP-SVG-Logo-Maker/blob/main/index.js
+
+http://thenewcode.com/1037/SVG-Shape-Elements-Polygons

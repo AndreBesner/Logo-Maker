@@ -1,8 +1,15 @@
 // include required packages
-const inquirer = require('inquirer');
-const fs = require('fs');
+// const inquirer = require('inquirer');
+import inquirer from 'inquirer';
+// const fs = require('fs');
+import fs from 'fs';
 // const svg = require('svg'); 
 //shape classes to be added
+
+// import the shapes classes
+import { Triangle } from './lib/shapes.js';
+const shapeClass = new Triangle();
+
 
 
 // array of questions for the user 
