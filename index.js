@@ -75,3 +75,7 @@ userPrompts();
 function writeSVG(data){
 
 }
+
+
+const triangle = new Triangle();
+console.log({triangle});
