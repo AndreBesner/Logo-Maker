@@ -1,16 +1,14 @@
 // include required packages
+
 // const inquirer = require('inquirer');
 import inquirer from 'inquirer';
 // const fs = require('fs');
 import fs from 'fs';
 // const svg = require('svg'); 
-//shape classes to be added
 
 // import the shapes classes
 import { Triangle } from './lib/shapes.js';
 const shapeClass = new Triangle();
-
-
 
 // array of questions for the user 
 const questions = [
@@ -45,7 +43,6 @@ function userPrompts() {
         console.log({data});
     })
 }
-
 //invokes the user question prompts with inquirer
 userPrompts();
 
@@ -53,22 +50,10 @@ userPrompts();
 
 // this function generates the svg file
 // takes answers from inquirer and dumps them into predefined text
-// function generateSVG(data) {
-//   <svg
-//     version="1.1"
-//     width="300"
-//     height="200"
-//     xmlns="http://www.w3.org/2000/svg"
-//   >
-//     <rect width="100%" height="100%" fill="red" />
+// actually no we need to take the answers from the data from inquirer and pass them into the shape class 
+function generateSVG(data) {
 
-//     <circle cx="150" cy="100" r="80" fill="green" />
-
-//     <text x="150" y="125" font-size="60" text-anchor="middle" fill="white">
-//       SVG
-//     </text>
-//   </svg>;
-// }
+}
 
 
 // this function actaully writes the generated svg file to directory
@@ -77,5 +62,5 @@ function writeSVG(data){
 }
 
 
-const triangle = new Triangle();
-console.log({triangle});
+const triangle = new Triangle(); // access the shape classes
+console.log({triangle}); // ensure they work lol
