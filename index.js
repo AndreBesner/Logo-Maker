@@ -18,6 +18,7 @@ const questions = [
   {
     type: "input",
     name: "colour",
+    //eventually I would want this validated to an actual list of colours and hex codes
     message: "Please enter a text colour/hex code, ensure you enter a valid colour, mixed colours should be hyphenated (ie 'dark-gray'):",
   },
   {
@@ -29,26 +30,23 @@ const questions = [
   {
     type: "input",
     name: "shapeColour",
+    //eventually I would want this validated to an actual list of colours and hex codes
     message: "Please enter a shape colour/hex code, ensure you enter a valid colour, mixed colours should be hyphenated (ie 'dark-gray'):",
   },
 ];
+//invokes the user question prompts with inquirer
+userPrompts();
 
 //this function starts the user promps
 function userPrompts() {
   inquirer.prompt(questions).then((data) => {
-    // console.log({data});
-    // this is where we will take the user data and feed it into
-    // generate svg function with a switch case based on 'shape' choice
+    // this is the function call to pass the data from question prompts to a function to make the logo and then save the file
     generateSVG(data);
-    //maybe we once we generate the svg we can put the write data function in that function?
   });
-}
-//invokes the user question prompts with inquirer
-userPrompts();
+};
 
 // this function generates the svg file
 // takes answers from inquirer and dumps them into predefined text
-// actually no we need to take the answers from the data from inquirer and pass them into the shape class
 function generateSVG(data) {
   let logo = "";
   switch (data.shape) {
@@ -60,8 +58,8 @@ function generateSVG(data) {
         data.shapeColour
       );
       logo = triangle.makeTriangle();
-      console.log(logo);
-      writeSVG(logo, `${data.title}.svg`);
+      // this calls the function to write the generated logo to file with the user input company acronym/title
+      writeSVG(logo, `${data.title}.svg`); 
       break;
 
     case "square":
@@ -72,7 +70,7 @@ function generateSVG(data) {
         data.shapeColour
       );
       logo = square.makeSquare();
-      console.log(logo);
+      // this calls the function to write the generated logo to file with the user input company acronym/title
       writeSVG(logo, `${data.title}.svg`);
       break;
 
@@ -84,11 +82,11 @@ function generateSVG(data) {
         data.shapeColour
       );
       logo = circle.makeCircle();
-      console.log(logo);
+      // this calls the function to write the generated logo to file with the user input company acronym/title
       writeSVG(logo, `${data.title}.svg`);
       break;
-  }
-}
+  };
+};
 
 // this function actaully writes the generated svg file to directory
 function writeSVG(logo, fileName) {
@@ -96,7 +94,4 @@ function writeSVG(logo, fileName) {
     if (err) console.log(err);
     console.log("logo file is ready!");
   });
-}
-
-// const triangle = new Triangle(); // access the shape classes
-// console.log({triangle}); // ensure they work lol
+};
