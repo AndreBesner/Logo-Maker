@@ -1,19 +1,11 @@
 // include required packages
-
-// const inquirer = require('inquirer');
 import inquirer from 'inquirer';
-// const fs = require('fs');
 import fs from 'fs';
-// const svg = require('svg'); 
-// import * as svg from 'svg';
-// import { SVG } from 'svg.js';
 import svg from 'svg.js';
 
-
-
 // import the shapes classes
-import { Triangle } from './lib/shapes.js';
-const shapeClass = new Triangle();
+import { Triangle, Square, Circle } from './lib/shapes.js';
+// const shapeClass = new Triangle();
 
 // array of questions for the user 
 const questions = [
@@ -75,12 +67,25 @@ function generateSVG(data) {
       break;
 
     case "square":
-      // const square = new Square(data.title, data.colour, data.shape, data.shapeColour);
-      console.log("square chosen");
+      const square = new Square(
+        data.title,
+        data.colour,
+        data.shape,
+        data.shapeColour
+      );
+      logo = square.makeSquare();
+      console.log(logo);
       break;
 
     case "circle":
-      console.log("circle chosen");
+      const circle = new Circle(
+        data.title,
+        data.colour,
+        data.shape,
+        data.shapeColour
+      );
+      logo = circle.makeCircle();
+      console.log(logo);
       break;
   }
 }
