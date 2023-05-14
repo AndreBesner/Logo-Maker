@@ -5,9 +5,8 @@ import svg from "svg.js";
 
 // import the shapes classes
 import { Triangle, Square, Circle } from "./lib/shapes.js";
-// const shapeClass = new Triangle();
 
-// array of questions for the user
+// array of questions for the user to generate logo
 const questions = [
   {
     type: "input",
@@ -19,7 +18,7 @@ const questions = [
   {
     type: "input",
     name: "colour",
-    message: "Please enter a text colour, ensure you enter a valid colour, mixed colours should be hyphenated (ie 'dark-gray'):",
+    message: "Please enter a text colour/hex code, ensure you enter a valid colour, mixed colours should be hyphenated (ie 'dark-gray'):",
   },
   {
     type: "list",
@@ -30,7 +29,7 @@ const questions = [
   {
     type: "input",
     name: "shapeColour",
-    message: "Please enter a shape colour ensure you enter a valid colour, mixed colours should be hyphenated (ie 'dark-gray'):",
+    message: "Please enter a shape colour/hex code, ensure you enter a valid colour, mixed colours should be hyphenated (ie 'dark-gray'):",
   },
 ];
 
