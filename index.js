@@ -13,8 +13,8 @@ const questions = [
     type: "input",
     name: "title",
     message:
-      "Please enter a company name/acronym, no more than three characters:",
-    validate: (input) => input.length <= 3,
+      "Please enter a company name/acronym, more than zero no more than three characters:",
+    validate: (input) => input.length > 0 && input.length <= 3,
   },
   {
     type: "input",
