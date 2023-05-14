@@ -13,5 +13,28 @@
     "@babel/preset-env": "^7.21.5",
     "babel-jest": "^29.5.0",
     "jest": "^29.5.0"
-  }
+  },
+  "name": "logo-maker",
+  "version": "1.0.0",
+  "description": "a command line program to generate a company logo from user supplied parameters",
+  "main": "index.js",
+  "directories": {
+    "example": "examples",
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndreBesner/Logo-Maker.git"
+  },
+  "keywords": [
+    "logos",
+    "svg",
+    "cli"
+  ],
+  "author": "Andre Besner",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AndreBesner/Logo-Maker/issues"
+  },
+  "homepage": "https://github.com/AndreBesner/Logo-Maker#readme"
 }
