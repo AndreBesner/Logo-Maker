@@ -19,7 +19,7 @@ const questions = [
   {
     type: "input",
     name: "colour",
-    message: "Please enter a text colour, ensure you enter a valid colour, mixed colours should be hyphenated (ie 'dark-gray'):",
+    message: "Please enter a text colour/hex code, ensure you enter a valid colour, mixed colours should be hyphenated (ie 'dark-gray'):",
   },
   {
     type: "list",
@@ -30,7 +30,7 @@ const questions = [
   {
     type: "input",
     name: "shapeColour",
-    message: "Please enter a shape colour ensure you enter a valid colour, mixed colours should be hyphenated (ie 'dark-gray'):",
+    message: "Please enter a shape colour/hex code, ensure you enter a valid colour, mixed colours should be hyphenated (ie 'dark-gray'):",
   },
 ];
 
