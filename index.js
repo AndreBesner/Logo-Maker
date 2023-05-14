@@ -19,7 +19,7 @@ const questions = [
   {
     type: "input",
     name: "colour",
-    message: "Please enter a text colour:",
+    message: "Please enter a text colour, ensure you enter a valid colour, mixed colours should be hyphenated (ie 'dark-gray'):",
   },
   {
     type: "list",
@@ -30,7 +30,7 @@ const questions = [
   {
     type: "input",
     name: "shapeColour",
-    message: "Please enter a shape colour:",
+    message: "Please enter a shape colour ensure you enter a valid colour, mixed colours should be hyphenated (ie 'dark-gray'):",
   },
 ];
 
@@ -62,7 +62,7 @@ function generateSVG(data) {
       );
       logo = triangle.makeTriangle();
       console.log(logo);
-      writeSVG(logo, "generated-logo.svg");
+      writeSVG(logo, `${data.title}.svg`);
       break;
 
     case "square":
@@ -74,7 +74,7 @@ function generateSVG(data) {
       );
       logo = square.makeSquare();
       console.log(logo);
-      writeSVG(logo, "generated-logo.svg");
+      writeSVG(logo, `${data.title}.svg`);
       break;
 
     case "circle":
@@ -86,17 +86,17 @@ function generateSVG(data) {
       );
       logo = circle.makeCircle();
       console.log(logo);
-      writeSVG(logo, "generated-logo.svg");
+      writeSVG(logo, `${data.title}.svg`);
       break;
   }
 }
 
 // this function actaully writes the generated svg file to directory
 function writeSVG(logo, fileName) {
-    fs.writeFile(fileName, logo, (err)=> {
-        if (err) console.log(err);
-        console.log('logo file is ready!');
-    });
+  fs.writeFile(fileName, logo, (err) => {
+    if (err) console.log(err);
+    console.log("logo file is ready!");
+  });
 }
 
 // const triangle = new Triangle(); // access the shape classes
