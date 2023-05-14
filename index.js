@@ -5,6 +5,11 @@ import inquirer from 'inquirer';
 // const fs = require('fs');
 import fs from 'fs';
 // const svg = require('svg'); 
+// import * as svg from 'svg';
+// import { SVG } from 'svg.js';
+import svg from 'svg.js';
+
+
 
 // import the shapes classes
 import { Triangle } from './lib/shapes.js';
@@ -56,7 +61,7 @@ userPrompts();
 // takes answers from inquirer and dumps them into predefined text
 // actually no we need to take the answers from the data from inquirer and pass them into the shape class 
 function generateSVG(data) {
-  let svg = "";
+  let logo = "";
   switch (data.shape) {
     case "triangle":
       const triangle = new Triangle(
@@ -65,7 +70,8 @@ function generateSVG(data) {
         data.shape,
         data.shapeColour
       );
-      svg = triangle.makeTriangle();
+      logo = triangle.makeTriangle();
+      console.log(logo);
       break;
 
     case "square":
