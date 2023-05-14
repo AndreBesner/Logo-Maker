@@ -41,6 +41,10 @@ function userPrompts() {
     inquirer.prompt(questions)
     .then(data => {
         console.log({data});
+        // this is where we will take the user data and feed it into
+        // generate svg function with a switch case based on 'shape' choice
+        generateSVG(data);
+        //maybe we once we generate the svg we can put the write data function in that function?
     })
 }
 //invokes the user question prompts with inquirer
