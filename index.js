@@ -92,6 +92,6 @@ function generateSVG(data) {
 function writeSVG(logo, fileName) {
   fs.writeFile(fileName, logo, (err) => {
     if (err) console.log(err);
-    console.log("logo file is ready!");
+    console.log("Generated logo.svg");
   });
 };
