@@ -5,9 +5,8 @@ import svg from "svg.js";
 
 // import the shapes classes
 import { Triangle, Square, Circle } from "./lib/shapes.js";
-// const shapeClass = new Triangle();
 
-// array of questions for the user
+// array of questions for the user to generate logo
 const questions = [
   {
     type: "input",
