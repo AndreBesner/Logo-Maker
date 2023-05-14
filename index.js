@@ -40,7 +40,7 @@ const questions = [
 function userPrompts() {
     inquirer.prompt(questions)
     .then(data => {
-        console.log({data});
+        // console.log({data});
         // this is where we will take the user data and feed it into
         // generate svg function with a switch case based on 'shape' choice
         generateSVG(data);
@@ -56,7 +56,27 @@ userPrompts();
 // takes answers from inquirer and dumps them into predefined text
 // actually no we need to take the answers from the data from inquirer and pass them into the shape class 
 function generateSVG(data) {
+  let svg = "";
+  switch (data.shape) {
+    case "triangle":
+      const triangle = new Triangle(
+        data.title,
+        data.colour,
+        data.shape,
+        data.shapeColour
+      );
+      svg = triangle.makeTriangle();
+      break;
 
+    case "square":
+      // const square = new Square(data.title, data.colour, data.shape, data.shapeColour);
+      console.log("square chosen");
+      break;
+
+    case "circle":
+      console.log("circle chosen");
+      break;
+  }
 }
 
 
@@ -67,4 +87,4 @@ function writeSVG(data){
 
 
 const triangle = new Triangle(); // access the shape classes
-console.log({triangle}); // ensure they work lol
+// console.log({triangle}); // ensure they work lol
