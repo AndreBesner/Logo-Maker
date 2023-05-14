@@ -62,6 +62,7 @@ function generateSVG(data) {
       );
       logo = triangle.makeTriangle();
       console.log(logo);
+      writeSVG(logo, "generated-logo.svg");
       break;
 
     case "square":
@@ -73,6 +74,7 @@ function generateSVG(data) {
       );
       logo = square.makeSquare();
       console.log(logo);
+      writeSVG(logo, "generated-logo.svg");
       break;
 
     case "circle":
@@ -84,12 +86,18 @@ function generateSVG(data) {
       );
       logo = circle.makeCircle();
       console.log(logo);
+      writeSVG(logo, "generated-logo.svg");
       break;
   }
 }
 
 // this function actaully writes the generated svg file to directory
-function writeSVG(data) {}
+function writeSVG(logo, fileName) {
+    fs.writeFile(fileName, logo, (err)=> {
+        if (err) console.log(err);
+        console.log('logo file is ready!');
+    });
+}
 
-const triangle = new Triangle(); // access the shape classes
+// const triangle = new Triangle(); // access the shape classes
 // console.log({triangle}); // ensure they work lol
