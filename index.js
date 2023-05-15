@@ -59,7 +59,7 @@ function generateSVG(data) {
       );
       logo = triangle.makeTriangle();
       // this calls the function to write the generated logo to file with the user input company acronym/title
-      writeSVG(logo, `${data.title}.svg`); 
+      writeSVG(logo, `logo.svg`); 
       break;
 
     case "square":
@@ -71,7 +71,7 @@ function generateSVG(data) {
       );
       logo = square.makeSquare();
       // this calls the function to write the generated logo to file with the user input company acronym/title
-      writeSVG(logo, `${data.title}.svg`);
+      writeSVG(logo, `logo.svg`);
       break;
 
     case "circle":
@@ -83,7 +83,7 @@ function generateSVG(data) {
       );
       logo = circle.makeCircle();
       // this calls the function to write the generated logo to file with the user input company acronym/title
-      writeSVG(logo, `${data.title}.svg`);
+      writeSVG(logo, `logo.svg`);
       break;
   };
 };
